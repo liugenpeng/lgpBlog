@@ -522,7 +522,7 @@ blockquote {
 
 .boxes {
   margin-top: 20px; }
-  .boxes .box:nth-child(n + 2) {
+  .boxes .box:nth-child(n+2) {
     margin-top: 20px; }
 
 .box {
@@ -1150,7 +1150,7 @@ figure.highlight {
     .image-gallery .image-gallery-photos--thumbnail .photo-box:nth-child(2) {
       margin-right: 2px;
       width: calc(50% - 2px); }
-    .image-gallery .image-gallery-photos--thumbnail .photo-box:nth-child(n + 4) {
+    .image-gallery .image-gallery-photos--thumbnail .photo-box:nth-child(n+4) {
       display: none; }
 
 a.link-unstyled,
@@ -1384,7 +1384,7 @@ a.link-unstyled a.link:active {
     z-index: 12; }
     .post-actions-wrap ul.post-action-share li.post-action {
       float: right; }
-      .post-actions-wrap ul.post-action-share li.post-action:nth-child(n + 2) .post-action-btn {
+      .post-actions-wrap ul.post-action-share li.post-action:nth-child(n+2) .post-action-btn {
         margin-right: 15px; }
 
 @media only screen and (max-width: 479px) {
