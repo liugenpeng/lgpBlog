@@ -11,15 +11,34 @@
     
 
     
-    <meta name="description" content="人之所以平凡，在于无法超越自己。">
-<meta property="og:type" content="website">
+    <meta name="description" content="Linux常用命令
+基本概念：1[root@localhost ~]#
+
+
+root表示当前登录用户
+localhost表示主机名 默认为localhost
+~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pw">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Mr LGP Blog">
-<meta property="og:url" content="http://liugenpeng.github.io/lgpBlog/index.html">
+<meta property="og:url" content="http://liugenpeng.github.io/lgpBlog/2015/05/23/linux/index.html">
 <meta property="og:site_name" content="Mr LGP Blog">
-<meta property="og:description" content="人之所以平凡，在于无法超越自己。">
+<meta property="og:description" content="Linux常用命令
+基本概念：1[root@localhost ~]#
+
+
+root表示当前登录用户
+localhost表示主机名 默认为localhost
+~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pw">
+<meta property="og:updated_time" content="2015-05-23T11:08:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mr LGP Blog">
-<meta name="twitter:description" content="人之所以平凡，在于无法超越自己。">
+<meta name="twitter:description" content="Linux常用命令
+基本概念：1[root@localhost ~]#
+
+
+root表示当前登录用户
+localhost表示主机名 默认为localhost
+~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pw">
 
     
     <link rel="alternative" href="/atom.xml" title="Mr LGP Blog" type="application/atom+xml">
@@ -73,12 +92,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="http://liugenpeng.github.io/lgpBlog/2015/05/23/linux/" title="" itemprop="url"></a>
@@ -92,9 +109,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h1 id="Linux常用命令">Linux常用命令</h1><hr>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux常用命令"><span class="toc-number">1.</span> <span class="toc-text">Linux常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念："><span class="toc-number">1.0.1.</span> <span class="toc-text">基本概念：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-number">1.0.2.</span> <span class="toc-text">命令格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、查询目录中的内容：ls命令"><span class="toc-number">2.</span> <span class="toc-text">一、查询目录中的内容：ls命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、文件处理命令"><span class="toc-number">3.</span> <span class="toc-text">二、文件处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-目录处理命令"><span class="toc-number">3.1.</span> <span class="toc-text">1.目录处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1)-建立目录"><span class="toc-number">3.1.1.</span> <span class="toc-text">1).建立目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2)切换目录"><span class="toc-number">3.1.2.</span> <span class="toc-text">2)切换目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3)查看所在目录"><span class="toc-number">3.1.3.</span> <span class="toc-text">3)查看所在目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-文件处理命令"><span class="toc-number">3.2.</span> <span class="toc-text">2.文件处理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-链接命令"><span class="toc-number">3.3.</span> <span class="toc-text">3.链接命令</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="Linux常用命令">Linux常用命令</h1><hr>
 <h3 id="基本概念：">基本概念：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ol>
@@ -147,14 +171,9 @@
 <h3 id="3)查看所在目录">3)查看所在目录</h3><p>基本语法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <hr>
-<h2 id="2-文件处理命令">2.文件处理命令</h2><h2 id="3-链接命令">3.链接命令</h2>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+<h2 id="2-文件处理命令">2.文件处理命令</h2><h2 id="3-链接命令">3.链接命令</h2>  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -162,82 +181,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://liugenpeng.github.io/lgpBlog/2015/05/23/linux/" data-title="Mr LGP Blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="http://liugenpeng.github.io/lgpBlog/2015/05/22/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="http://liugenpeng.github.io/lgpBlog/about" title="刘根鹏" target="_blank" itemprop="author">刘根鹏</a>
-		
-  <p class="article-time">
-    <time datetime="2015-05-22T04:38:59.000Z" itemprop="datePublished"> 发表于 2015-05-22</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="http://liugenpeng.github.io/lgpBlog/2015/05/22/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
+	
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux常用命令"><span class="toc-number">1.</span> <span class="toc-text">Linux常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念："><span class="toc-number">1.0.1.</span> <span class="toc-text">基本概念：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-number">1.0.2.</span> <span class="toc-text">命令格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、查询目录中的内容：ls命令"><span class="toc-number">2.</span> <span class="toc-text">一、查询目录中的内容：ls命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、文件处理命令"><span class="toc-number">3.</span> <span class="toc-text">二、文件处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-目录处理命令"><span class="toc-number">3.1.</span> <span class="toc-text">1.目录处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1)-建立目录"><span class="toc-number">3.1.1.</span> <span class="toc-text">1).建立目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2)切换目录"><span class="toc-number">3.1.2.</span> <span class="toc-text">2)切换目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3)查看所在目录"><span class="toc-number">3.1.3.</span> <span class="toc-text">3)查看所在目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-文件处理命令"><span class="toc-number">3.2.</span> <span class="toc-text">2.文件处理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-链接命令"><span class="toc-number">3.3.</span> <span class="toc-text">3.链接命令</span></a></li></ol></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -356,12 +336,69 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
 
 
 
@@ -422,4 +459,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
