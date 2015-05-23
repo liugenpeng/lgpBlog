@@ -11,31 +11,34 @@
     
 
     
-    <meta name="description" content="基本概念：1[root@localhost ~]#
+    <meta name="description" content="Linux常用命令
+基本概念：1[root@localhost ~]#
 
 
 root表示当前登录用户
 localhost表示主机名 默认为localhost
-~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pwd命令查看当前所在目">
+~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pw">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux常用命令">
 <meta property="og:url" content="http://liugenpeng.github.io/lgpBlog/2015/05/23/linux-basic/index.html">
 <meta property="og:site_name" content="Mr LGP Blog">
-<meta property="og:description" content="基本概念：1[root@localhost ~]#
+<meta property="og:description" content="Linux常用命令
+基本概念：1[root@localhost ~]#
 
 
 root表示当前登录用户
 localhost表示主机名 默认为localhost
-~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pwd命令查看当前所在目">
-<meta property="og:updated_time" content="2015-05-23T11:23:18.000Z">
+~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pw">
+<meta property="og:updated_time" content="2015-05-23T14:54:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用命令">
-<meta name="twitter:description" content="基本概念：1[root@localhost ~]#
+<meta name="twitter:description" content="Linux常用命令
+基本概念：1[root@localhost ~]#
 
 
 root表示当前登录用户
 localhost表示主机名 默认为localhost
-~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pwd命令查看当前所在目">
+~表示当前所在目录(家目录)root用户家目录是/root,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pw">
 
     
     <link rel="alternative" href="/atom.xml" title="Mr LGP Blog" type="application/atom+xml">
@@ -111,11 +114,12 @@ localhost表示主机名 默认为localhost
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念："><span class="toc-number">1.</span> <span class="toc-text">基本概念：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-number">2.</span> <span class="toc-text">命令格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、查询目录中的内容：ls命令"><span class="toc-number"></span> <span class="toc-text">一、查询目录中的内容：ls命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、文件处理命令"><span class="toc-number"></span> <span class="toc-text">二、文件处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-目录处理命令"><span class="toc-number"></span> <span class="toc-text">1.目录处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1)-建立目录"><span class="toc-number">1.</span> <span class="toc-text">1).建立目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2)切换目录"><span class="toc-number">2.</span> <span class="toc-text">2)切换目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3)查看所在目录"><span class="toc-number">3.</span> <span class="toc-text">3)查看所在目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-文件处理命令"><span class="toc-number"></span> <span class="toc-text">2.文件处理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-链接命令"><span class="toc-number"></span> <span class="toc-text">3.链接命令</span></a>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux常用命令"><span class="toc-number">1.</span> <span class="toc-text">Linux常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念："><span class="toc-number">1.0.1.</span> <span class="toc-text">基本概念：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-number">1.0.2.</span> <span class="toc-text">命令格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、查询目录中的内容：ls命令"><span class="toc-number">2.</span> <span class="toc-text">一、查询目录中的内容：ls命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、文件处理命令"><span class="toc-number">3.</span> <span class="toc-text">二、文件处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录处理命令"><span class="toc-number">3.1.</span> <span class="toc-text">目录处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立目录"><span class="toc-number">3.1.1.</span> <span class="toc-text">建立目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换目录"><span class="toc-number">3.1.2.</span> <span class="toc-text">切换目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看所在目录"><span class="toc-number">3.1.3.</span> <span class="toc-text">查看所在目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除空文件夹"><span class="toc-number">3.1.4.</span> <span class="toc-text">删除空文件夹</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#只能删空目录，否则会报错"><span class="toc-number">3.2.</span> <span class="toc-text">只能删空目录，否则会报错</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#删除文件或目录"><span class="toc-number">3.2.1.</span> <span class="toc-text">删除文件或目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复制命令"><span class="toc-number">3.2.2.</span> <span class="toc-text">复制命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#剪切或者重命名命令"><span class="toc-number">3.2.3.</span> <span class="toc-text">剪切或者重命名命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件处理命令"><span class="toc-number">3.3.</span> <span class="toc-text">文件处理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接命令"><span class="toc-number">3.4.</span> <span class="toc-text">链接命令</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h3 id="基本概念：">基本概念：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+		<h1 id="Linux常用命令">Linux常用命令</h1><hr>
+<h3 id="基本概念：">基本概念：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ol>
 <li><strong>root</strong>表示当前登录用户</li>
@@ -152,22 +156,30 @@ localhost表示主机名 默认为localhost
 </blockquote>
 <p>通过知识讲解，分析一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r--. 1 root root 12190 10&#26376; 31 2013 install.log</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>1.开始第一个字符是<code>-</code>说明这是个文件<br>2.<code>rw-</code> 读写权限 root用户拥有（显示内容中第一个root）<br>3.<code>r--</code> 只读权限 root组拥有（注意root属于所有者，在root组属于个例，root组中其他人只读权限）<br>4.<code>r--</code> 其他人只读权限<br>5.<code>.</code>   代表ACL权限</p>
-<ol>
-<li><code>1</code> 引用计数，代表在软链接引用次数</li>
-</ol>
+<p>1.开始第一个字符是<code>-</code>说明这是个文件<br>2.<code>rw-</code> 读写权限 root用户拥有（显示内容中第一个root）<br>3.<code>r--</code> 只读权限 root组拥有（注意root属于所有者，在root组属于个例，root组中其他人只读权限）<br>4.<code>r--</code> 其他人只读权限<br>5.<code>.</code>   代表ACL权限<br>6.1 引用计数，代表在软链接引用次数</p>
 </blockquote>
 <hr>
-<h1 id="二、文件处理命令">二、文件处理命令</h1><h2 id="1-目录处理命令">1.目录处理命令</h2><hr>
-<h3 id="1)-建立目录">1).建立目录</h3><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p [&#30446;&#24405;&#21517;]</span><br></pre></td></tr></table></figure></p>
+<h1 id="二、文件处理命令">二、文件处理命令</h1><h2 id="目录处理命令">目录处理命令</h2><hr>
+<h3 id="建立目录">建立目录</h3><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p [&#30446;&#24405;&#21517;]</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>1.<code>-p</code> 选项代表递归创建，比如 <code>mkdir -p /home/dd/dds</code><br>2.如果目录存在，会提示已经存在，不会创建成功<br>3.如果 m1和m2目录不存在,命令 <code>mkdir /home/m1/m2</code>会出错<code>无法创建目录&quot;/m1/m2&quot;: 没有那个文件或目录</code></p>
-<h3 id="2)切换目录">2)切换目录</h3><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd [&#30446;&#24405;]</span><br></pre></td></tr></table></figure></p>
+<h3 id="切换目录">切换目录</h3><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd [&#30446;&#24405;]</span><br></pre></td></tr></table></figure></p>
 <p>1.与window系统一样<br>2.<code>cd ~</code>或者<code>cd</code>进入当前登录用户家目录<br>3.<code>cd -</code>进入上次目录<br>4.<code>cd ..</code>进入上一级目录<br>5.<code>cd .</code> 进入当前目录</p>
-<h3 id="3)查看所在目录">3)查看所在目录</h3><p>基本语法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure></p>
+<h3 id="查看所在目录">查看所在目录</h3><p>基本语法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<hr>
-<h2 id="2-文件处理命令">2.文件处理命令</h2><h2 id="3-链接命令">3.链接命令</h2>  
+<h3 id="删除空文件夹">删除空文件夹</h3><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir [&#30446;&#24405;&#21517;]</span><br></pre></td></tr></table></figure></p>
+<h2 id="只能删空目录，否则会报错"><code>只能删空目录，否则会报错</code></h2><h3 id="删除文件或目录">删除文件或目录</h3><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm [&#36873;&#39033;] [&#25991;&#20214;&#25110;&#30446;&#24405;]&#10;&#36873;&#39033;&#65306;&#10;    -r &#21024;&#38500;&#30446;&#24405;&#10;    -f &#24378;&#21046;</span><br></pre></td></tr></table></figure></p>
+<p>用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@&#23567;&#24378; ~]# rm abc&#10;rm&#65306;&#26159;&#21542;&#21024;&#38500;&#26222;&#36890;&#31354;&#25991;&#20214; &#34;abc&#34;&#65311;y</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>rm -rf abc 不会提示，直接删除</p>
+<h3 id="复制命令">复制命令</h3><p>基本用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp [&#36873;&#39033;] [&#21407;&#25991;&#20214;&#25110;&#30446;&#24405;] [&#30446;&#26631;&#30446;&#24405;]&#10;&#36873;&#39033;&#65306;&#10; -r &#22797;&#21046;&#30446;&#24405;&#10; -p &#36830;&#24102;&#25991;&#20214;&#23646;&#24615;&#22797;&#21046;&#10; -d &#33509;&#21407;&#25991;&#20214;&#26159;&#38142;&#25509;&#25991;&#20214;&#65292;&#21017;&#22797;&#21046;&#23646;&#24615;&#38142;&#25509;&#10; -a &#30456;&#24403;&#20110; -pdr &#36873;&#39033;&#38598;&#21512;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="剪切或者重命名命令">剪切或者重命名命令</h3><p>基本用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv  [&#21407;&#25991;&#20214;&#25110;&#30446;&#24405;] [&#30446;&#26631;&#30446;&#24405;]</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>操作都在一个目录下，可以实现重命名操作;</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv xx.xml xx1.xml //xx.xml&#37325;&#21629;&#21517;&#25104;&#20102;xx1.xml</span><br></pre></td></tr></table></figure>
+<h2 id="文件处理命令">文件处理命令</h2><h2 id="链接命令">链接命令</h2>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -203,7 +215,7 @@ localhost表示主机名 默认为localhost
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念："><span class="toc-number">1.</span> <span class="toc-text">基本概念：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-number">2.</span> <span class="toc-text">命令格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、查询目录中的内容：ls命令"><span class="toc-number"></span> <span class="toc-text">一、查询目录中的内容：ls命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、文件处理命令"><span class="toc-number"></span> <span class="toc-text">二、文件处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-目录处理命令"><span class="toc-number"></span> <span class="toc-text">1.目录处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1)-建立目录"><span class="toc-number">1.</span> <span class="toc-text">1).建立目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2)切换目录"><span class="toc-number">2.</span> <span class="toc-text">2)切换目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3)查看所在目录"><span class="toc-number">3.</span> <span class="toc-text">3)查看所在目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-文件处理命令"><span class="toc-number"></span> <span class="toc-text">2.文件处理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-链接命令"><span class="toc-number"></span> <span class="toc-text">3.链接命令</span></a>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux常用命令"><span class="toc-number">1.</span> <span class="toc-text">Linux常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本概念："><span class="toc-number">1.0.1.</span> <span class="toc-text">基本概念：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-number">1.0.2.</span> <span class="toc-text">命令格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、查询目录中的内容：ls命令"><span class="toc-number">2.</span> <span class="toc-text">一、查询目录中的内容：ls命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、文件处理命令"><span class="toc-number">3.</span> <span class="toc-text">二、文件处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目录处理命令"><span class="toc-number">3.1.</span> <span class="toc-text">目录处理命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立目录"><span class="toc-number">3.1.1.</span> <span class="toc-text">建立目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换目录"><span class="toc-number">3.1.2.</span> <span class="toc-text">切换目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看所在目录"><span class="toc-number">3.1.3.</span> <span class="toc-text">查看所在目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除空文件夹"><span class="toc-number">3.1.4.</span> <span class="toc-text">删除空文件夹</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#只能删空目录，否则会报错"><span class="toc-number">3.2.</span> <span class="toc-text">只能删空目录，否则会报错</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#删除文件或目录"><span class="toc-number">3.2.1.</span> <span class="toc-text">删除文件或目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复制命令"><span class="toc-number">3.2.2.</span> <span class="toc-text">复制命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#剪切或者重命名命令"><span class="toc-number">3.2.3.</span> <span class="toc-text">剪切或者重命名命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件处理命令"><span class="toc-number">3.3.</span> <span class="toc-text">文件处理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接命令"><span class="toc-number">3.4.</span> <span class="toc-text">链接命令</span></a></li></ol></li></ol>
  
   </div>
 
