@@ -81,20 +81,72 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="http://liugenpeng.github.io/lgpBlog/2015/05/23/linux-basic/" title="linux-basic" itemprop="url">linux-basic</a>
+      <a href="http://liugenpeng.github.io/lgpBlog/2015/05/23/linux-basic/" title="Linux常用命令" itemprop="url">Linux常用命令</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://liugenpeng.github.io/lgpBlog/about" title="刘根鹏" target="_blank" itemprop="author">刘根鹏</a>
 		
   <p class="article-time">
-    <time datetime="2015-05-23T11:19:34.000Z" itemprop="datePublished"> 发表于 2015-05-23</time>
+    <time datetime="2015-05-23T11:19:20.000Z" itemprop="datePublished"> 发表于 2015-05-23</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        
+        <h3 id="基本概念：">基本概念：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li><strong>root</strong>表示当前登录用户</li>
+<li><strong>localhost</strong>表示主机名 默认为localhost</li>
+<li><strong>~</strong>表示当前所在目录(家目录)<br><strong>root</strong>用户家目录是<strong>/root</strong>,其他用户家目录是/home/用户名/ ，比如是test用户，家目录是/home/test/,建立用户的时候，家目录自动生成，也就是说，linux保证每一个用户都有一个家。可以通过pwd命令查看当前所在目录</li>
+<li><strong>#</strong> 超级用户提示符&nbsp;&nbsp;&nbsp;<strong>$</strong>普通用户提示符</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="命令格式">命令格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#21629;&#20196; [&#36873;&#39033;] [&#21442;&#25968;]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>1.个别命令并不是这样格式的<br>2.当有多个选项时，可以写在一起<br>3.简化选项与完整选项，例如  <strong>-a</strong>  等价于 <strong>—a</strong></p>
+</blockquote>
+<hr>
+<h1 id="一、查询目录中的内容：ls命令">一、查询目录中的内容：<strong>ls</strong>命令</h1><hr>
+<p>基本语言：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls [&#36873;&#39033;] [&#25991;&#20214;&#25110;&#30446;&#24405;]</span><br></pre></td></tr></table></figure></p>
+<p>选项:<br></p>
+<blockquote>
+<p><code>-a</code>&nbsp;&nbsp;&nbsp;显示所有文件，包括隐藏文件<br><code>-l</code>&nbsp;&nbsp;&nbsp;显示详细信息<br><code>-d</code>&nbsp;&nbsp;&nbsp;查看目录属性<br><code>-h</code>&nbsp;&nbsp;&nbsp;人性化显示文件大小<br><code>-i</code>&nbsp;&nbsp;&nbsp;显示inode 也就是id</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#22240;&#20026;&#22810;&#20010;&#36873;&#39033;&#21487;&#20197;&#20889;&#22312;&#19968;&#36215;&#65292;&#25152;&#20197; ls -a -h &#31561;&#20215;&#20110; ls -ah</span><br></pre></td></tr></table></figure>
+<p>当输入ls -lh的时候，第一列显示内容代表权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r--. 1 root root 12190 10&#26376; 31 2013 install.log</span><br></pre></td></tr></table></figure></p>
+<p>权限默认10位标识，第一位代表文件类型，常用的类型如下：</p>
+<blockquote>
+<p><code>-</code> 代表文件<br><code>d</code> 代表目录<br><code>l</code> 软链接文件（快捷方式）</p>
+</blockquote>
+<p>剩下九位每三位为一组，代表这个文件的所有者、所属组（用户组）、其他人三个身份的权限。<br>身份：</p>
+<blockquote>
+<p><code>u</code> 所有者<br><code>g</code> 所属组<br><code>o</code> 其他人</p>
+</blockquote>
+<p>权限：</p>
+<blockquote>
+<p><code>r</code> 读<br><code>w</code> 写<br><code>x</code> 执行</p>
+</blockquote>
+<p>通过知识讲解，分析一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rw-r--r--. 1 root root 12190 10&#26376; 31 2013 install.log</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>1.开始第一个字符是<code>-</code>说明这是个文件<br>2.<code>rw-</code> 读写权限 root用户拥有（显示内容中第一个root）<br>3.<code>r--</code> 只读权限 root组拥有（注意root属于所有者，在root组属于个例，root组中其他人只读权限）<br>4.<code>r--</code> 其他人只读权限<br>5.<code>.</code>   代表ACL权限</p>
+<ol>
+<li><code>1</code> 引用计数，代表在软链接引用次数</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="二、文件处理命令">二、文件处理命令</h1><h2 id="1-目录处理命令">1.目录处理命令</h2><hr>
+<h3 id="1)-建立目录">1).建立目录</h3><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p [&#30446;&#24405;&#21517;]</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>1.<code>-p</code> 选项代表递归创建，比如 <code>mkdir -p /home/dd/dds</code><br>2.如果目录存在，会提示已经存在，不会创建成功<br>3.如果 m1和m2目录不存在,命令 <code>mkdir /home/m1/m2</code>会出错<code>无法创建目录&quot;/m1/m2&quot;: 没有那个文件或目录</code></p>
+<h3 id="2)切换目录">2)切换目录</h3><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd [&#30446;&#24405;]</span><br></pre></td></tr></table></figure></p>
+<p>1.与window系统一样<br>2.<code>cd ~</code>或者<code>cd</code>进入当前登录用户家目录<br>3.<code>cd -</code>进入上次目录<br>4.<code>cd ..</code>进入上一级目录<br>5.<code>cd .</code> 进入当前目录</p>
+<h3 id="3)查看所在目录">3)查看所在目录</h3><p>基本语法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<h2 id="2-文件处理命令">2.文件处理命令</h2><h2 id="3-链接命令">3.链接命令</h2>
         
         
         <p class="article-more-link">
@@ -104,6 +156,11 @@
     <footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="http://liugenpeng.github.io/lgpBlog/all-tags/Linux/">Linux</a>
+  </div>
 
 </div>
 
@@ -135,6 +192,17 @@
   
 
   
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="http://liugenpeng.github.io/lgpBlog/all-tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
